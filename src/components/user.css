@@ -1,0 +1,29 @@
+.welcome {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.homehome {
+  position: relative;
+  left: -200px;
+}
+
+.logout {
+  background-color: white;
+  color: rgb(2, 119, 253);
+  border-color: rgb(2, 119, 253);
+  border-style: solid;
+  height: 35px;
+  width: 100px;
+  cursor: pointer;
+  transition: background-color 0.7s, color 0.7s;
+}
+
+.logout:hover {
+  background-color: rgb(2, 119, 253);
+  color: white;
+}
+.logout:active {
+  opacity: 0.7;
+}

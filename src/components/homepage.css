@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+    --primary-color: #007AF3;
+  }
+  
+  .navbar {
+    background: rgb(105, 206, 200);
+    padding: 1em;
+  }
+  body {
+    background: #F2F2F2;
+    margin: 0;
+    font-family: 'Poppins';
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.navbar .logo {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 1.4em;
+   
+  }
+  
+  .navbar .logo span {
+    color: var(--primary-color);
+  }
+
+
+  
+  .navbar .container {
+    
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 180px auto;
+        grid-template-columns: 180px auto;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    
+  }
+  .navbar nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+   
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+  
+  }
+  
+
+  .navbar nav a {
+    color: black;
+    padding: .1em 1em;
+    text-decoration: none;
+    font-size: 1.3em;
+
+  }
+  
+nav li a:hover {
+  font-weight: bold;
+}
+  .navbar nav ul.primary-nav {
+    margin: 0;
+  
+  }
+
+  .navbar nav li.current a {
+    font-weight: bold;
+  }
+  .navbar nav li.go-premium-cta a {
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    font-weight: bold;
+    border-radius: 5em;
+    margin-top: -.2em;
+  }
+  .navbar nav li.go-premium-cta a:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+
+  .create{
+
+padding: 5px;
+padding-left: 20px;
+background-color:lightblue;
+font-size: 20px;
+height:  600px;
+
+
+  }
+
+  .createbtn{
+    font-family: 'Poppins';
+    position: absolute;
+    left: 600px;
+    font-size: 35px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    height: 100px;
+    width: 300px;
+    
+
+
+  }
+
+  .addgroupform input[type=text] {
+    top: 50px;
+    padding: 5px;
+    left: 50px;
+    height: 40px;
+    font-size: 25px;
+    width: 300px;
+    position: relative;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: aquamarine;
+    
+  }
+  
+  .addgroupform{
+    border: 5px;
+    border-style: solid;
+    
+    padding: 10px;
+    width: 400px;
+    background-color: aquamarine;
+    display: none;
+    position: absolute;
+    left: 550px;
+    height: 400px;
+    z-index: 9;
+ 
+
+ 
+  }
+
+  @keyframes pop{
+    25%{
+      height: 100px;width: 100px;
+    }
+    50%{
+      height: 200px;width: 200px;
+    }
+    75%{
+      height: 300px;width: 300px;
+    }
+    100%{
+      height: 400px;width: 400px;
+    }
+    
+    
+
+
+  }
+
+  .currency{
+    position: relative;
+    top: 175px;
+    left: 50px;
+
+    border: none;
+    font-size: 30px;
+    background-color: aquamarine;
+    border-bottom: 2px solid black;
+
+
+
+  }
+
+  .screen2{
+    position:relative;
+    left:175px;
+    top: 200px;
+    padding: 10px;
+    width: 200px;
+    font-size: 20px;
+
+  }
+
+  .about{
+    font-size: 20px;
+    padding: 20px;
+    background-color: lightblue;
+  }
+
+
+  /* .imagex {
+    background-image: url("design1.jpg");
+    padding: 0;
+    background-blend-mode: lighten;
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25%;
+    background-color: lightblue;
+  } */
+
+
+  .getstarted{
+
+    background-color: pink;
+    padding: 20px;
+    padding-top: 60px;
+    
+    font-size: 30px;
+    text-align: center;
+
+  }

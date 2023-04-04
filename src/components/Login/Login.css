@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+:root {
+  --primary-color: #007af3;
+}
+
+.logospan {
+  position: relative;
+  top: 100px;
+  width: fit-content;
+  left: 600px;
+}
+.logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 40px;
+}
+
+.logo span {
+  color: var(--primary-color);
+}
+
+.form {
+  display: block;
+  border-style: solid;
+  padding: 30px;
+  border-width: 2px;
+  width: fit-content;
+  position: relative;
+  font-family: "Poppins";
+  left: 500px;
+  top: 200px;
+  transform: translateX(100px);
+}
+
+.form-control {
+  width: 50%;
+}

@@ -1,0 +1,5 @@
+mongodb+srv://adithyabiju902:<password>@cluster0.uxhkyxz.mongodb.net/?retryWrites=true&w=majority
+
+1. open mongodb
+2. run server (nodemon app)
+3. run site (npm start)

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+:root {
+  --primary-color: #007af3;
+}
+
+.form {
+  display: block;
+  border-style: solid;
+  padding: 30px;
+  border-width: 2px;
+  width: fit-content;
+  position: relative;
+  font-family: "Poppins";
+  left: 500px;
+  top: 100px;
+}
+
+.form-control {
+  width: 50%;
+}
+
+#btn-primary {
+  border-radius: 20px;
+  background-color: black;
+}
