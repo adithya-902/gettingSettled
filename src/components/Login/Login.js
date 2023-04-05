@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Login.css";
+import "./styles.css";
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -41,58 +41,45 @@ export default class Login extends Component {
   render() {
     window.localStorage.setItem("token", 0);
     return (
-      <>
-        <div className="logospan">
-          <a href="/dashboard" class="logo">
-            Getting<span>Settled</span>
+      <body class="login-body">
+        <header>
+          <a href="" class="logo">
+            getting<span>Settled</span>
           </a>
-        </div>
-        <form onSubmit={this.handleSubmit}>
-          <div className="form">
-            <h3>Sign in</h3>
-
-            <div className="mb-3">
-              <input
-                type="email"
-                className="form-control"
-                placeholder="Enter email"
-                onChange={(e) => this.setState({ email: e.target.value })}
-              />
-            </div>
-
-            <div className="mb-3">
-              <input
-                type="password"
-                className="form-control"
-                placeholder="Enter password"
-                onChange={(e) => this.setState({ password: e.target.value })}
-              />
-            </div>
-
-            <div className="mb-3">
-              <div className="custom-control custom-checkbox">
-                <input
-                  type="checkbox"
-                  className="custom-control-input"
-                  id="customCheck1"
-                />
-                <label className="custom-control-label" htmlFor="customCheck1">
-                  Remember me
-                </label>
+        </header>
+        <div class="bigbox">
+          <form onSubmit={this.handleSubmit}>
+            <div class="box">
+              <div class="forms">
+                <p id="p1">Sign in</p>
+                <div class="mainform">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    name="username"
+                    id="username"
+                    onChange={(e) => this.setState({ email: e.target.value })}
+                  />
+                  <br />
+                  <input
+                    type="password"
+                    placeholder="password"
+                    name="passwd"
+                    id="passwd"
+                    onChange={(e) =>
+                      this.setState({ password: e.target.value })
+                    }
+                  />
+                  <input type="submit" value="SIGN-IN" class="submit" />
+                  <a href="/sign-up" class="forgor">
+                    Sign Up
+                  </a>
+                </div>
               </div>
             </div>
-
-            <div className="d-grid">
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
-            </div>
-            <p className="forgot-password text-right">
-              <a href="/sign-up">Sign Up</a>
-            </p>
-          </div>
-        </form>
-      </>
+          </form>
+        </div>
+      </body>
     );
   }
 }

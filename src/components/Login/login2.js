@@ -1,3 +1,5 @@
+import React from "react";
+
 import React, { Component } from "react";
 import "./styles.css";
 export default class Login extends Component {
@@ -41,42 +43,36 @@ export default class Login extends Component {
   render() {
     window.localStorage.setItem("token", 0);
     return (
-      <>
-        <div class="navbar">
-          <a href="splash.html" class="home">
-            GettingSettled
-          </a>
-          <button class="about">About</button>
-          <button class="contact">Contact Us</button>
-        </div>
+      <form onSubmit={this.handleSubmit}>
         <div class="box">
           <div class="form">
-            <p id="p1">LOGIN</p>
+            <p id="p1">Sign in</p>
             <br />
             <div class="mainform">
-              <form>
-                <input
-                  type="text"
-                  placeholder="username"
-                  name="username"
-                  id="username"
-                />
-                <br />
-                <input
-                  type="password"
-                  placeholder="password"
-                  name="passwd"
-                  id="passwd"
-                />
-                <input type="submit" value="SIGN-IN" class="submit" />
-                <a href="url" class="forgor">
-                  forgot password?
-                </a>
-              </form>
+              <input
+                type="email"
+                placeholder="Email"
+                name="username"
+                id="username"
+                className="form-control"
+                onChange={(e) => this.setState({ email: e.target.value })}
+              />
+              <br />
+              <input
+                type="password"
+                placeholder="password"
+                name="passwd"
+                id="passwd"
+                onChange={(e) => this.setState({ password: e.target.value })}
+              />
+              <input type="submit" value="SIGN-IN" class="submit" />
+              <a href="url" class="forgor">
+                forgot password?
+              </a>
             </div>
           </div>
         </div>
-      </>
+      </form>
     );
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 import React, { Component } from "react";
-import "./Login.css";
+import "./styles.css";
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -33,58 +33,44 @@ export default class Login extends Component {
         console.log(data, "userRegister");
         if (data.status == "ok") {
           alert("login successful");
+
           window.localStorage.setItem("token", data.data);
+
           window.location.href = "./dashboard";
         }
       });
   }
   render() {
+    window.localStorage.setItem("token", 0);
     return (
       <form onSubmit={this.handleSubmit}>
-        <div className="form">
-          <h3>Sign in</h3>
-
-          <div className="mb-3">
-            <label>Email address</label>
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Enter email"
-              onChange={(e) => this.setState({ email: e.target.value })}
-            />
-          </div>
-
-          <div className="mb-3">
-            <label>Password</label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Enter password"
-              onChange={(e) => this.setState({ password: e.target.value })}
-            />
-          </div>
-
-          <div className="mb-3">
-            <div className="custom-control custom-checkbox">
+        <div class="box">
+          <div class="form">
+            <p id="p1">Sign in</p>
+            <br />
+            <div class="mainform">
               <input
-                type="checkbox"
-                className="custom-control-input"
-                id="customCheck1"
+                type="email"
+                placeholder="Email"
+                name="username"
+                id="username"
+                className="form-control"
+                onChange={(e) => this.setState({ email: e.target.value })}
               />
-              <label className="custom-control-label" htmlFor="customCheck1">
-                Remember me
-              </label>
+              <br />
+              <input
+                type="password"
+                placeholder="password"
+                name="passwd"
+                id="passwd"
+                onChange={(e) => this.setState({ password: e.target.value })}
+              />
+              <input type="submit" value="SIGN-IN" class="submit" />
+              <a href="url" class="forgor">
+                forgot password?
+              </a>
             </div>
           </div>
-
-          <div className="d-grid">
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
-          </div>
-          <p className="forgot-password text-right">
-            <a href="/sign-up">Sign Up</a>
-          </p>
         </div>
       </form>
     );

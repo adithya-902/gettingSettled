@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.login-body {
+  display: flex;
+  min-height: 100vh;
+  background-image: url("C:\\Users\\Adithya\\Documents\\Coding\\github\\gettingSettled\\public\\background.jpg");
+  background-repeat: repeat;
+  background-size: 300px;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  height: 75px;
+  background-color: #2c3338;
+}
+
+.bigbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 140px;
+}
+
+.box {
+  position: relative;
+  height: 420px;
+  width: 380px;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  height: 420px;
+  width: 380px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, #b6dc98, #b6dc98);
+  animation: animate 6s linear infinite;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  height: 420px;
+  width: 380px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, #b6dc98, #b6dc98);
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.forms {
+  inset: 4px;
+  position: absolute;
+  display: flex;
+  z-index: 10;
+  background-color: #2c3338;
+  border-radius: 8px;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+#p1 {
+  font-size: 30px;
+  font-family: "Rubik", sans-serif;
+  font-weight: bolder;
+  color: #f4f4f4;
+  margin-top: 10px;
+  margin-bottom: 90px;
+}
+
+.mainform {
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+}
+
+input {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+
+input[type="email"] {
+  background-color: #3b4148;
+  color: #f4f4f4;
+  width: 100%;
+  height: 48px;
+  padding-left: 16px;
+  border-radius: 5px;
+  transform: translate(0, -50px);
+  margin-bottom: 25px;
+}
+
+input[type="text"]:focus {
+  border: 1.8px solid #0000ff;
+  background-color: #23242a;
+}
+
+input[type="password"] {
+  background-color: #3b4148;
+  color: #f4f4f4;
+  width: 100%;
+  height: 48px;
+  padding-left: 16px;
+  border-radius: 5px;
+  transform: translate(0, -50px);
+}
+
+.submit {
+  width: 100%;
+  background-color: #2c3338;
+  color: #f4f4f4;
+  border-radius: 0.25rem;
+  border: solid 2px #0c7a1c;
+  height: 48px;
+  font-size: larger;
+  margin-top: 0px;
+  transition: background-color 0.5s ease;
+}
+
+.submit:hover {
+  cursor: pointer;
+  background-color: #0c7a1c;
+}
+
+.forgor {
+  color: #f4f4f4;
+  text-decoration: none;
+  display: flex;
+  font-weight: 500;
+  justify-content: center;
+  margin-top: 20px;
+  transition: color 0.7s ease;
+  width: 100px;
+  margin-left: 35%;
+}
+
+.forgor:hover {
+  color: #0c7a1c;
+}

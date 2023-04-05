@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+/*import React, { Component } from "react";
 //import Login from "../Login/Login";
 import "./Signup.css";
 
@@ -98,6 +98,102 @@ export default class SignUp extends Component {
           </p>
         </div>
       </form>
+    );
+  }
+}*/
+
+import React, { Component } from "react";
+//import Login from "../Login/Login";
+import "./Signup.css";
+
+export default class SignUp extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      fname: "",
+      lname: "",
+      email: "",
+      password: "",
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleSubmit(e) {
+    e.preventDefault();
+    const { fname, lname, email, password } = this.state;
+    console.log(fname, lname, email, password);
+    fetch("http://localhost:3000/register", {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        fname,
+        email,
+        lname,
+        password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "userRegister");
+
+        if (data.status === "ok") {
+          alert("Sign up successful");
+          window.location.href = "./sign-in";
+        }
+      });
+  }
+  render() {
+    return (
+      <body>
+        <form onSubmit={this.handleSubmit}>
+          <div class="box">
+            <div class="form">
+              <p id="p1">Sign up</p>
+              <div class="mainform">
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  name="fname"
+                  id="fname"
+                  onChange={(e) => this.setState({ fname: e.target.value })}
+                />
+                <br />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  name="lname"
+                  id="lname"
+                  onChange={(e) => this.setState({ lname: e.target.value })}
+                />
+                <br />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  id="email"
+                  onChange={(e) => this.setState({ email: e.target.value })}
+                />
+                <br />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="passwd"
+                  id="passwd"
+                  onChange={(e) => this.setState({ password: e.target.value })}
+                />
+                <input type="submit" value="SIGN-IN" class="submit" />
+                <a href="/login" class="forgor">
+                  Sign in
+                </a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </body>
     );
   }
 }
