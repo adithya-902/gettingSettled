@@ -5,6 +5,7 @@ import ExpenseForm from "./ExpenseForm";
 import Notification from "./Notification";
 import NewExpenseModal from "./NewExpenseModal";
 import "./index.scss";
+import "./Home.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Component } from "react";
 
@@ -255,33 +256,25 @@ const Home = () => {
         splitted: data,
       };
       setFinal(true);
-      // if(newExpense.expense_name !== '' && newExpense.date !== '' && newExpense.members.length !== 0 && newExpense.expenses.length !== 0 &&
-      //   newExpense.splitted.length !== 0) {
-      //   expenseService.addData(newExpense)
-      //   .then(returnedExpense => {
-      //     handleFinal()
-      //     setTimeout(() => {
-      //       makeNullAll()
-      //     }, 5000)
-      //   })
-      //   .catch(error => {
-      //     showMessage(<div id="snackbar">Validation failed, Please verify expense details.</div>)
-      //   })
-      // }
-      // else {
-      //   showMessage(<div id="snackbar">Please enter all the details</div>)
-      // }
     });
   };
-
   return (
-    <div>
-      <div className="logospan1">
-        <a href="/dashboard" class="logo1">
-          Getting<span>Settled</span>
-        </a>
-      </div>
-
+    <div class="maindiv">
+      <header>
+        <table>
+          <tr>
+            <td>
+              <div class="logoe"></div>
+            </td>
+            <td></td>
+            <td class="logout1">
+              <a href="/dashboard">
+                <button class="logoutb">Log out</button>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </header>
       <Container className="home">
         <Notification msg={message} />
 

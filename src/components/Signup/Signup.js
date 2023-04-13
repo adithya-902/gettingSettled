@@ -103,7 +103,7 @@ export default class SignUp extends Component {
 }*/
 
 import React, { Component } from "react";
-//import Login from "../Login/Login";
+//import login from "../Login/Login";
 import "./Signup.css";
 
 export default class SignUp extends Component {
@@ -121,7 +121,7 @@ export default class SignUp extends Component {
     e.preventDefault();
     const { fname, lname, email, password } = this.state;
     console.log(fname, lname, email, password);
-    fetch("http://localhost:3000/register", {
+    fetch("http://localhost:5000/register", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -148,51 +148,60 @@ export default class SignUp extends Component {
   }
   render() {
     return (
-      <body>
-        <form onSubmit={this.handleSubmit}>
-          <div class="box">
-            <div class="form">
-              <p id="p1">Sign up</p>
-              <div class="mainform">
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  name="fname"
-                  id="fname"
-                  onChange={(e) => this.setState({ fname: e.target.value })}
-                />
-                <br />
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  name="lname"
-                  id="lname"
-                  onChange={(e) => this.setState({ lname: e.target.value })}
-                />
-                <br />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  id="email"
-                  onChange={(e) => this.setState({ email: e.target.value })}
-                />
-                <br />
-                <input
-                  type="password"
-                  placeholder="Password"
-                  name="passwd"
-                  id="passwd"
-                  onChange={(e) => this.setState({ password: e.target.value })}
-                />
-                <input type="submit" value="SIGN-IN" class="submit" />
-                <a href="/login" class="forgor">
-                  Sign in
-                </a>
+      <body class="login-body">
+        <header>
+          <a href="./dashboard">
+            <div class="logo-signin"></div>
+          </a>
+        </header>
+        <div class="bigbox-signup">
+          <form onSubmit={this.handleSubmit}>
+            <div class="box-sign-in">
+              <div class="forms">
+                <p id="p1">Sign up</p>
+                <div class="mainform">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    name="fname"
+                    id="fname"
+                    onChange={(e) => this.setState({ fname: e.target.value })}
+                  />
+                  <br />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    name="lname"
+                    id="lname"
+                    onChange={(e) => this.setState({ lname: e.target.value })}
+                  />
+                  <br />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    id="email"
+                    onChange={(e) => this.setState({ email: e.target.value })}
+                  />
+                  <br />
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    name="passwd"
+                    id="passwd"
+                    onChange={(e) =>
+                      this.setState({ password: e.target.value })
+                    }
+                  />
+                  <input type="submit" value="SIGN-UP" class="submit-sign-up" />
+                  <a href="./sign-in" class="forgor">
+                    Sign in
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </body>
     );
   }

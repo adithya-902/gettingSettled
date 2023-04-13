@@ -1,5 +1,10 @@
 import React from "react";
 
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+
+import TextBlock from "./textBlock";
+import "./Homepage-aviral.css";
+
 import Button from "@mui/material/Button";
 import ReactDOM from "react-dom/client";
 
@@ -11,97 +16,87 @@ import UserDetails from "./userdetails";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const Handleclick = (Event) => {
-  if (window.localStorage.getItem("token") != 0) {
-    root.render(<UserDetails />);
-  } else {
-    alert("Login first");
-    window.location.href = "./sign-in";
-  }
+  window.location.href = "./sign-in";
 };
 
 const Homepage = () => {
   const navigate = useNavigate();
   return (
-    <>
-      <div class="navbar">
-        <div class="container">
-          <a href="" class="logo">
-            getting<span>Settled</span>
-          </a>
+    <div className="App" id="test">
+      <Parallax
+        pages={1.78}
+        style={{ top: "0", left: "0" }}
+        class="animation"
+        id="1"
+      >
+        <ParallaxLayer offset={0} speed={0.25} sticky={{ start: 0, end: 2.5 }}>
+          <div class="buttons">
+            <table class="avi">
+              <tr>
+                <td>
+                  <div class="test">$</div>
+                </td>
+                <td>
+                  <button class="button-68" role="button">
+                    <a href="./sign-in">SIGN IN</a>
+                  </button>
+                </td>
+                <td>
+                  <button class="button-68" role="button">
+                    <a href="./sign-up">SIGN UP</a>
+                  </button>
+                </td>
+                <td>
+                  <button class="button-68" role="button">
+                    <a href="https://api.whatsapp.com/send/?phone=919910309201&text&type=phone_number&app_absent=0">
+                      CONTACT
+                    </a>
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </ParallaxLayer>
 
-          <nav>
-            <ul class="primary-nav">
-              <li class="current">
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">About us</a>
-              </li>
-              <li>
-                <a href="#getstarted">Get started</a>
-              </li>
-            </ul>
+        <ParallaxLayer offset={0} speed={0.25}>
+          <div class="animation_layer parallax" id="artback"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.3}>
+          <div class="animation_layer parallax" id="mountain"></div>
+        </ParallaxLayer>
 
-            <ul class="secondary-nav">
-              <li>
-                <a href="#">Contact</a>
-              </li>
-              <li class="go-premium-cta">
-                <a href="#">View your Events</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+        <ParallaxLayer offset={0} speed={-0.5}>
+          <div class="animation_layer parallax" id="logoland">
+            <h2 class="text_parallax">
+              <u>GettingSettled</u>
+            </h2>
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.3}>
+          <div class="animation_layer parallax" id="jungle1"></div>
+        </ParallaxLayer>
 
-      <div class="about">
-        <h2>About us</h2>
+        <ParallaxLayer offset={0} speed={0.35}>
+          <div class="animation_layer parallax" id="jungle2"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.5}>
+          <div class="animation_layer parallax" id="jungle3"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.45}>
+          <div class="animation_layer parallax" id="jungle4"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.4}>
+          <div class="animation_layer parallax" id="manonmountain"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.35}>
+          <div class="animation_layer parallax" id="jungle5"></div>
+        </ParallaxLayer>
 
-        <br />
-        <p>
-          <b>gettingSettled</b> is a full-featured web app that makes it simple
-          to split expenses and track borrowing and lending over time. Its
-          helpful tools and user-friendly interface make it our top choice among
-          bill-splitting apps.{" "}
-        </p>
-
-        <p>
-          It supports both simple and complicated payment scenarios, and it's
-          particularly handy when you're traveling internationally and you need
-          to split costs in a different currency.
-        </p>
-        <br />
-        <p>
-          The app tracks borrowing and lending over time. And until the balance
-          is settled, each person’s outstanding balance may go up and down. This
-          app sends reminder notifications about your balances and you’ll find a
-          tally of the amount you owe on the homepage. Payments can be settled
-          with PayPal or Venmo directly from the app, or if the person who owes
-          you pays in cash, you can record a cash payment to clear up the
-          outstanding balance.
-        </p>
-
-        <p>
-          This app also allow users to reduce the number of trasactions pending
-          because of lending or owing and makes them limited by taking an
-          aggregate with eliminating the middle-man.
-        </p>
-      </div>
-
-      <div className="getstarted" id="getstarted">
-        So, to make it easy for you guys and split expenses within your group
-        <br />
-        <br />
-        <Button
-          color="secondary"
-          variant="contained"
-          size="large"
-          onClick={Handleclick}
-        >
-          Create a Party
-        </Button>
-      </div>
-    </>
+        <ParallaxLayer offset={0.98} speed={0.25}>
+          <TextBlock />
+        </ParallaxLayer>
+      </Parallax>
+    </div>
   );
 };
 

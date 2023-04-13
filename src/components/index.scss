@@ -7,11 +7,14 @@ $infoCard-Blue: #1a237e;
 $light-grey: #e0e0e0;
 body {
   font-family: "Poppins";
+  background-color: #1c1c1c;
 
   .home {
+    border: 2px solid white;
     position: relative;
-    top: 100px;
-    background-color: pink;
+    top: 80px;
+    background-color: rgba(39, 174, 96, 0.2);
+    border-radius: 20px;
   }
 
   .welcome {
@@ -206,7 +209,7 @@ body {
     font-feature-settings: "liga";
   }
   .split {
-    padding-top: 80px;
+    padding-top: 40px;
     .card {
       box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.16),
         0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
@@ -246,7 +249,11 @@ body {
       }
     }
     .split_btn {
-      margin: 30px;
+      margin-left: 350px;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      height: 50px;
+      border: 1px solid white;
       font-weight: 600;
       background-color: #1e2032;
       color: #bbdefb;

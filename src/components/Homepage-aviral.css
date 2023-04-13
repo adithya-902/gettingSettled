@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+#textblock {
+  background-color: rgb(0, 51, 41);
+  height: 100vh;
+}
+.logo {
+  background-image: url("C:\\Users\\Adithya\\Documents\\Coding\\github\\gettingSettled\\public\\main-logo2.png");
+  height: 100%;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  background-size: 50px;
+  background-repeat: no-repeat;
+}
+.test {
+  display: flex;
+  flex-direction: column;
+}
+#textblock-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: white;
+}
+a:focus {
+  color: rgb(255, 255, 255);
+}
+a:active {
+  color: rgb(255, 255, 255);
+}
+
+table tr td:first-child {
+  padding-right: 500px;
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+.test {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgb(58, 109, 92);
+  color: white;
+  font-size: 35px;
+  text-align: center;
+}
+
+.avi tr td:not(:first-child) {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.buttons {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+}
+.button-68 {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: rgb(58, 109, 92);
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, 0.15) 0 4px 9px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 13px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-68:hover {
+  background-color: rgb(79, 170, 155);
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: 0.35s;
+}
+
+.button-68:active {
+  transform: translateY(2px);
+  transition-duration: 0.35s;
+}
+
+a {
+  color: #f4f4f4;
+}
+
+.button-68:hover {
+  box-shadow: rgba(39, 174, 96, 0.2) 0 6px 12px;
+  color: #f4f4f4;
+}
+
+#textblock-title {
+  color: #ffaf1b;
+  font-size: 67px;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
+#textblock-content {
+  color: #f4f4f4;
+  font-size: 27px;
+  font-family: "Poppins";
+}
+
+#textblock-devsense {
+  text-decoration: none;
+  color: #ffaf1b;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.animation,
+.animation_layer {
+  height: 1000px;
+}
+
+.animation {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.animation_layer {
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+}
+.animation_layer.parallax {
+  position: fixed;
+}
+
+#text_parallax {
+  text-align: center;
+  font-size: 100px;
+  color: darkgreen;
+  font-weight: bold;
+}
+#artback {
+  background-image: url(../images/tree.png);
+}
+
+#mountain {
+  background-image: url(../images/hill1.png);
+}
+
+#logoland {
+  background-image: url(../images/hill2.png);
+}
+
+#jungle1 {
+  background-image: url(../images/hill3.png);
+}
+
+#jungle2 {
+  background-image: url(../images/hill4.png);
+}
+
+#jungle3 {
+  background-image: url(../images/hill5.png);
+}
+
+#jungle4 {
+  background-image: url(../images/plant.png);
+}
+
+#jungle5 {
+  background-image: url(../images/tree.png);
+}
+.text_parallax {
+  color: rgb(58, 109, 92);
+
+  font-size: 7em;
+  padding-top: 120px;
+  padding-right: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px;
+}
+#test {
+  background-color: black;
+}
+#back {
+  background-image: url(../images/photo-1603366615917-1fa6dad5c4fa.jpeg);
+  height: 300px;
+}
+
+#manonmountain {
+  background-image: url(../images/leaf.png);
+}

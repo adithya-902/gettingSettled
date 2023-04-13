@@ -30,11 +30,11 @@ export default class Login extends Component {
       .then((data) => {
         console.log(data, "userRegister");
         if (data.status == "ok") {
-          alert("login successful");
-
           window.localStorage.setItem("token", data.data);
 
-          window.location.href = "./dashboard";
+          window.location.href = "./dashboard/createparty";
+        } else {
+          alert("invalid login details");
         }
       });
   }
@@ -43,8 +43,8 @@ export default class Login extends Component {
     return (
       <body class="login-body">
         <header>
-          <a href="" class="logo">
-            getting<span>Settled</span>
+          <a class="logo-home" href="./dashboard">
+            <div class="logo-signin"></div>
           </a>
         </header>
         <div class="bigbox">
@@ -79,6 +79,7 @@ export default class Login extends Component {
             </div>
           </form>
         </div>
+        <p id="msg"></p>
       </body>
     );
   }
