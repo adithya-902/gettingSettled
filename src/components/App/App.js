@@ -19,7 +19,6 @@ const App = () => {
         <Route exact path="/createparty" element={<Home />} />
 
         <Route exact path="/" element={<Homepage />} />
-        <Route path="/dashboard" element={<Homepage />} />
         <Route path="/sign-in" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/userDetails" element={<UserDetails />} />
